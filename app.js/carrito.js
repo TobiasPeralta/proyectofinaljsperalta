@@ -1,26 +1,44 @@
-const carritoCont = document.querySelector('.carrito-cont');
+const contenedorCart = document.querySelector('.contenedor__cart');
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function mostrarCarrito() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    console.log("Carrito cargado desde localStorage:", carrito); 
-
+    contenedorCart.innerHTML = ''; 
     if (carrito.length === 0) {
-        carritoCont.innerHTML = `<p>Aún no has agregado artículos</p>`;
-    } else {
-        carritoCont.innerHTML = '';
-        carrito.forEach(articulo => {
-            console.log("Artículo en el carrito:", articulo); 
-            const articuloHTML = `
-            <div class="articulo-carrito">
-                <img src="${articulo.imagen}" alt="${articulo.titulo}">
-                <h3>${articulo.titulo}</h3>
-                <p>${articulo.precio}</p>
-                <button class="eliminar"><i class="bi bi-cart-dash-fill"></i><button>
-            </div>
-            `;
-            carritoCont.innerHTML += articuloHTML;
-        });
+        contenedorCart.innerHTML = '<p class="text__cart">Aun no has agregado articulos a tu carrito</p>';
+        return;
     }
+
+    carrito.forEach((articulo, index) => {
+        const articuloHTML = `
+        <div class="producto__cart">
+            <img src="${articulo.imagen}" alt="${articulo.titulo}">
+            <div class="producto-body">
+                <h2 class="titulo">${articulo.titulo}</h2>
+                <p class="precio">${articulo.precio}</p>
+                <button class="boton__eliminar" data-index="${index}"><i class="bi bi-cart-dash-fill"></i></button>
+            </div>
+        </div>
+        `;
+        contenedorCart.innerHTML += articuloHTML;
+    });
+
+    const botonesEliminar = document.querySelectorAll('.boton__eliminar');
+    botonesEliminar.forEach(boton => {
+        boton.addEventListener('click', (event) => {
+            const index = event.target.getAttribute('data-index');
+            eliminarDelCarrito(index);
+        });
+    });
+}
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1); 
+    guardarCarrito(); 
+    mostrarCarrito(); 
+}
+
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 mostrarCarrito();

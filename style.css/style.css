@@ -104,6 +104,14 @@ header{
   body{
     background-color: rgb(89, 197, 89);
   }
-
-
-
+.botones__art{
+  display: flex;
+}
+.textbtn{
+  font-size: 10px;
+}
+.text__cart{
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+}

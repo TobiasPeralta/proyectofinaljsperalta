@@ -14,7 +14,10 @@ function cargarArticulos(articulos) {
                 <div class="producto-body">
                     <h2 class="titulo">${articulo.titulo}</h2>
                     <p class="precio">${articulo.precio}</p>
-                    <button class="boton__cart"><i class="bi-cart-plus-fill"></i></button>
+                    <div class="botones__art">
+                        <button class="boton__cart__agregar"><i class="bi-cart-plus-fill"></i><p class="textbtn">Agregar al carrito</p></button>
+                        <button class="boton__cart__comprar"><i class="bi bi-currency-dollar"></i><p class="textbtn">Comprar ahora</p></button>
+                    </div>
                 </div>
             </article>
         </section>
@@ -22,21 +25,33 @@ function cargarArticulos(articulos) {
         
         articulosCont.innerHTML += articuloHTML;
     });
-
-    const botonesAgregar = document.querySelectorAll('.boton__cart');
+    const botonesAgregar = document.querySelectorAll('.boton__cart__agregar');
     botonesAgregar.forEach((boton, index) => {
         boton.addEventListener('click', () => {
-            agregarAlCarrito(articulos[index]);
+            const articuloSeleccionado = articulos[index];
+            carrito.push(articuloSeleccionado);
+            guardarCarrito();
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 3000,
+                gravity: "bottom", 
+                position: "right", 
+                backgroundColor: "#4CAF50",
+            }).showToast();
+        });
+    });
+    const botonesComprar = document.querySelectorAll('.boton__cart__comprar');
+    botonesComprar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            Swal.fire({
+                title: 'Gracias por tu compra',
+                text: 'Tu pedido ha sido procesado con éxito.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
         });
     });
 }
-
-function agregarAlCarrito(articulo) {
-    carrito.push(articulo);
-    localStorage.setItem('carrito', JSON.stringify(carrito)); 
-    alert(`${articulo.titulo} ha sido agregado al carrito`);
-}
-
 function filtrarArticulos(categoriaId) {
     const articulosFiltrados = articulos.filter(articulo => articulo.categoria.id === categoriaId);
     cargarArticulos(articulosFiltrados);
@@ -62,3 +77,4 @@ document.querySelectorAll('.botones__nav').forEach(boton => {
         }
     });
 });
+
