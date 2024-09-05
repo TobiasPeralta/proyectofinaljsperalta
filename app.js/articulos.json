@@ -1,0 +1,146 @@
+[
+    {
+    "id": "billetera01",
+    "titulo":"Billeteras Grabadas",
+    "imagen":"../imagenes/billeteras1.jpg",
+    "categoria": {
+        "nombre":"Billeteras",
+        "id":"billeteras"
+    },
+    "precio":"$6.000"},
+    {
+        "id": "cinturon01",
+        "titulo":"Cinturón de Cámara",
+        "imagen":"../imagenes/cinturones1.jpg",
+        "categoria": {
+            "nombre":"Cinturones",
+            "id":"cinturones"
+        },
+        "precio":"$9.000"},
+    {
+        "id": "mascotera01",
+        "titulo":"Mascotera Grande",
+        "imagen":"../imagenes/mascoteras1.jpg",
+        "categoria": {
+            "nombre":"Mascoteras",
+            "id":"mascoteras"
+        },
+        "precio":"$15.000"},
+    {
+        "id": "pulsera01",
+        "titulo":"Pulseras Finas",
+        "imagen":"../imagenes/pulsera1.jpg",
+        "categoria": {
+            "nombre":"Pulseras",
+            "id":"pulseras"
+        },
+        "precio":"$2.000"},
+    {
+        "id": "billetera02",
+        "titulo":"Billeteras Lisas",
+        "imagen":"../imagenes/billeteras2.jpg",
+        "categoria": {
+            "nombre":"Billeteras",
+            "id":"billeteras"
+        },
+        "precio":"$5.500"},
+    {
+        "id": "cinturon02",
+        "titulo":"Cinturón liso",
+        "imagen":"../imagenes/cinturones2.jpg",
+        "categoria": {
+             "nombre":"Cinturones",
+             "id":"cinturones"
+        },
+        "precio":"$7.000"},
+    {
+        "id": "mascotera02",
+        "titulo":"Mascotera Mediana",
+        "imagen":"../imagenes/mascoteras2.jpg",
+        "categoria": {
+            "nombre":"Mascoteras",
+            "id":"mascoteras"
+        },
+        "precio":"$13.000"},
+    {
+        "id": "pulsera02",
+        "titulo":"Pulseras finas",
+        "imagen":"../imagenes/pulsera2.jpg",
+        "categoria": {
+            "nombre":"Pulseras",
+            "id":"pulseras"
+        },
+        "precio":"$2.000"},
+    {
+        "id": "billetera03",
+        "titulo":"Billeteras Personalizadas",
+        "imagen":"../imagenes/billeteras3.jpg",
+        "categoria": {
+            "nombre":"Billeteras",
+            "id":"billeteras"
+        },
+        "precio":"$8.000"},
+    {
+        "id": "cinturon03",
+        "titulo":"Cinturón Liso",
+        "imagen":"../imagenes/cinturones3.jpg",
+        "categoria": {
+            "nombre":"Cinturones",
+            "id":"cinturones"
+        },
+        "precio":"$7.000"},
+    {
+        "id": "mascotera03",
+        "titulo":"Masacotera Chica",
+        "imagen":"../imagenes/mascoteras3.jpg",
+        "categoria": {
+            "nombre":"Mascoteras",
+            "id":"mascoteras"
+        },
+        "precio":"$10.000"},
+    {
+        "id": "pulsera03",
+        "titulo":"Pulseras Grandes",
+        "imagen":"../imagenes/pulsera3.jpg",
+        "categoria": {
+            "nombre":"Pulseras",
+            "id":"pulseras"
+        },
+        "precio":"$3.500"},
+    {
+        "id": "billetera04",
+        "titulo":"Billeteras Personalizadas",
+        "imagen":"../imagenes/billeteras4.jpg",
+        "categoria": {
+            "nombre":"Billeteras",
+            "id":"billeteras"
+        },
+        "precio":"$8.000"},
+    {
+        "id": "cinturon04",
+        "titulo":"Cinturón con Parches",
+        "imagen":"../imagenes/cinturones4.jpg",
+        "categoria": {
+            "nombre":"Cinturones",
+            "id":"cinturones"
+        },
+        "precio":"$7.500"},
+    {
+        "id": "mascotera04",
+        "titulo":"Masacotera Chica",
+        "imagen":"../imagenes/mascoteras4.jpg",
+        "categoria": {
+            "nombre":"Mascoteras",
+            "id":"mascoteras"
+        },
+        "precio":"$10.000"},
+    {
+        "id": "pulsera04",
+        "titulo":"Pulseras Grandes",
+        "imagen":"../imagenes/pulsera4.jpg",
+        "categoria": {
+            "nombre":"Pulseras",
+            "id":"pulseras"
+        },
+        "precio":"3.500"}
+]
